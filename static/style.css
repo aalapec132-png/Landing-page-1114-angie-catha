@@ -1,0 +1,23 @@
+body {
+font-family: Arial, sans-serif;
+max-width: 600px;
+margin: 40px auto;
+padding: 0 20px;
+color: #222;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 20px;
+}
+input {
+padding: 8px;
+}
+button {
+padding: 10px;
+background: #0E3696;
+color: white;
+border: none;
+cursor: pointer;
+}

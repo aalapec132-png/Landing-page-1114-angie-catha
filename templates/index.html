@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- TODO Paso 1: title descriptivo, menos de 60 caracteres -->
+<title> Tu tienda de maquillaje y belleza online</title>
+<!-- TODO Paso 1: meta description, menos de 155 caracteres -->
+<meta name="description" content="Descubre maquillaje,cosmeticos y productos de belleza online ideales 
+para crear tus mejores looks con variedad,caldad y estilo">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+<!-- TODO Paso 1: un solo H1, distinto al title -->
+<h1>GLOW UP BEAUTY</h1>
+<!-- TODO Paso 1: agrega el atributo alt describiendo la imagen -->
+<img src="{{ url_for('static', filename='banner.jpg') }}" alt="">
+</header>
+<main>
+<p>Curso de programación 1114 — inscríbete y te contactamos.</p>
+<form action="/enviar" method="POST">
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" required>
+<label for="correo">Correo</label>
+<input type="email" id="correo" name="correo" required>
+<label for="interes">¿Qué te interesa aprender?</label>
+<input type="text" id="interes" name="interes">
+<!-- Paso 3: activa la versión que corresponda según ?version=a o ?version=b
+-->
+{% if version == "b" %}
+<button type="submit">Reserva tu cupo gratis</button>
+{% else %}
+<button type="submit">Enviar</button>
+{% endif %}
+</form>
+
+</main>
+</body>
+</html>
